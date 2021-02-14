@@ -92,6 +92,7 @@ for communities in islice(comp, max_shown):
 
     shown_count += 1
 ```
+### Sample output
 
 ![Sample Output Graph](./tests/graph-1.png)
 
