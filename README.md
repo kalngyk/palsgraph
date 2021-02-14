@@ -2,7 +2,7 @@
 PalsGraph provides three methods to enable easy use of NetworkX to display the communities discovered in a graph.
 
 * make\_graph: Create a NetworkX graph with labels
-* getpos: Calculate the positions of the graph nodes using Pals' algorithm
+* getpos: Calculate optimal positions for the graph nodes using Pals' algorithm
 * gen_colormap: Generate a colormap for use with NetworkX
 
 
@@ -56,10 +56,7 @@ max_shown = 3
 shown_count = 1
 for communities in islice(comp, max_shown): # For each possible set of communities
 
-    outfilename = 'graph-' + str(shown_count) + '.png'
-    print("Possibility ", shown_count, " will be saved in " + outfilename)
-
-    # Find positions for the nodes in the graph
+    # Find optimal positions for displaying the nodes in the graph
     pos = palsgraph.getpos(G, communities)
 
     # Generate a colormap
@@ -68,6 +65,7 @@ for communities in islice(comp, max_shown): # For each possible set of communiti
     # Draw graph and save to output file
     plt.figure(figsize=(17, 15))
     nx.draw(G, pos=pos, node_color=color_map, edge_color='grey', with_labels=True)
+    outfilename = 'graph-' + str(shown_count) + '.png'
     plt.savefig(outfilename)
 
     shown_count += 1
