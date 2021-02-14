@@ -1,9 +1,9 @@
 # PalsGraph: a module for use with NetworkX to display communities in graph
 PalsGraph provides three methods to enable easy use of NetworkX to display the communities discovered in a graph.
 
-* make\_graph
-* getpos
-* gen_colormap
+* make\_graph: Creates a NetworkX graph with labels
+* getpos: Calculate the positions of the graph nodes using Pals' algorithm
+* gen_colormap: Generate a colormap for use with NetworkX
 
 
 ## Pre-requirements
