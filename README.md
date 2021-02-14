@@ -59,14 +59,13 @@ for communities in islice(comp, max_shown):
     outfilename = 'graph-' + str(shown_count) + '.png'
     print("Possibility ", shown_count, " will be saved in " + outfilename)
 
-    pos = palsgraph.getpos(G, communities) # Find positions for the nodes in the graph
+    # Find positions for the nodes in the graph
+    pos = palsgraph.getpos(G, communities)
 
-    colorize = True
-    if colorize:
-        color_map = palsgraph.gen_colormap(G, communities);  # Generate a colormap
-    else:
-        color_map = ['grey']
+    # Generate a colormap
+    color_map = palsgraph.gen_colormap(G, communities)
 
+    # Saves to output file
     plt.figure(figsize=(17, 15))
     nx.draw(G, pos=pos, node_color=color_map, edge_color='grey', with_labels=True)
     plt.savefig(outfilename)
