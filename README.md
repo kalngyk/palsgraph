@@ -54,7 +54,7 @@ import matplotlib.pyplot as plt
 from itertools import islice
 max_shown = 2
 shown_count = 1
-for communities in islice(comp, max_shown):
+for communities in islice(comp, max_shown): # For each possible set of communities
 
     outfilename = 'graph-' + str(shown_count) + '.png'
     print("Possibility ", shown_count, " will be saved in " + outfilename)
@@ -65,7 +65,7 @@ for communities in islice(comp, max_shown):
     # Generate a colormap
     color_map = palsgraph.gen_colormap(G, communities)
 
-    # Saves to output file
+    # Draw graph and save to output file
     plt.figure(figsize=(17, 15))
     nx.draw(G, pos=pos, node_color=color_map, edge_color='grey', with_labels=True)
     plt.savefig(outfilename)
