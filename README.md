@@ -93,5 +93,7 @@ for communities in islice(comp, max_shown):
     shown_count += 1
 ```
 
+![Sample Output Graph](https://github.com/kalngyk/palsgraph/blob/Default/graph-1.png?raw=true)
+
 ## Help
 If you have any questions or require assistance using PalsGraph, please contact us with kalngyk@gmail.com.
