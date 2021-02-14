@@ -2,8 +2,8 @@
 PalsGraph provides three methods to enable easy use of NetworkX to display the communities discovered in a graph.
 
 * make\_graph: Create a NetworkX graph with labels
-* getpos: Calculate optimal positions for the graph nodes using Pals' algorithm
-* gen_colormap: Generate a colormap for use with NetworkX
+* getpos: Calculate optimal positions visualizing the graph nodes based on the communities discovered
+* gen_colormap: Generate a colormap where each community is given a unique color
 
 
 ## Pre-requirements
