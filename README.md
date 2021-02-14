@@ -72,6 +72,9 @@ for communities in islice(comp, max_shown): # For each possible set of communiti
 
     shown_count += 1
 ```
+
+If you implement your own community detection algorithm, just output the communities in the form of `({'A'}, {'B', 'C'}, {'D', 'E'})` and you will be able to use PalsGraph just like in the example above.
+
 ### Sample output
 
 ![Sample Output Graph](./tests/graph-1.png)
