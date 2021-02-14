@@ -98,3 +98,6 @@ for communities in islice(comp, max_shown):
 
 ## Help
 If you have any questions or require assistance using PalsGraph, please contact us with kalngyk@gmail.com.
+
+## Credits
+PalsGraph is written by Yujin Yao and Yen Kaow Ng.
