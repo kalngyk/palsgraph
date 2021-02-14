@@ -46,7 +46,9 @@ Then, suppose we use a method in NetworkX to discover the communities in `G`.
 import networkx as nx
 comp = nx.algorithms.community.centrality.girvan_newman(G)
 ```
-The graph and the communities discovered can be visualized as follows:
+NetworkX will return several possible ways to organize the graph into communities. Each possibility is an array of arrays. For example, `({'A'}, {'B', 'C'}, {'D', 'E'})`, which says that `'A'` is a community, `'B'`, `'C'` form another, and `'D'`, `'E'` likewise form another.
+
+The following codes show how each possibility can be enumerated (using islice) and visualized using palsgraph.
 ```Python
 import matplotlib.pyplot as plt
 from itertools import islice
@@ -55,13 +57,13 @@ shown_count = 1
 for communities in islice(comp, max_shown):
 
     outfilename = 'graph-' + str(shown_count) + '.png'
-    print("Possibility ", shown_count, " in " + outfilename)
+    print("Possibility ", shown_count, " will be saved in " + outfilename)
 
-    pos = palsgraph.getpos(G, communities) # Find nodes layout using palsgraph
+    pos = palsgraph.getpos(G, communities) # Find positions for the nodes in the graph
 
     colorize = True
     if colorize:
-        color_map = palsgraph.gen_colormap(G, communities);  # Generate a colormap using palsgraph
+        color_map = palsgraph.gen_colormap(G, communities);  # Generate a colormap
     else:
         color_map = ['grey']
 
