@@ -34,40 +34,19 @@ python setup.py install
 ### Quick start
 The following codes demonstrates how to use the three functions provided by PalsGraph.
 
-First, prepare a distance matrix, such as the following:
-```Python
-import numpy as np
-from scipy.spatial.distance import squareform
-simfilename = 'test.tsv'
-X = np.genfromtxt(simfilename, delimiter='\t', encoding='utf8', dtype=None)
-labels = []
-for label in [x[0] for x in X]:
-    if label in labels:
-        continue
-    labels.append(label)
-for label in [x[1] for x in X]:
-    if label in labels:
-        continue
-    labels.append(label)
-dismat = squareform([x[2] for x in X])
-threshold = 0.75
-dismat2 = dismat.copy()
-np.fill_diagonal(dismat2, np.min(dismat))
-dismat2 = dismat2.reshape((-1,))
-dismat2[dismat2 > threshold] = 0
-dismat2 = dismat2.reshape(dismat.shape)
-```
-The following constructs a NetworkX graph from the distance matrix
+Assume that we have a distance matrix in `distmat`, with the labels of the entities in `labels`. 
+The following constructs a NetworkX graph from the distance matrix.
+
 ```Python
 import palsgraph
-G = palsgraph.make_graph(dismat2, labels=labels, show_singletons=False)
+G = palsgraph.make_graph(distmat, labels=labels, show_singletons=False)
 ```
-Find community using any method in NetworkX
+Then, suppose we use a method in NetworkX to discover the communities in `G`. 
 ```Python
 import networkx as nx
 comp = nx.algorithms.community.centrality.girvan_newman(G)
 ```
-Show the communities discovered, as follows:
+The graph and the communities discovered can be visualized as follows:
 ```Python
 import matplotlib.pyplot as plt
 from itertools import islice
