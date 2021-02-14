@@ -52,7 +52,7 @@ The following codes show how each possibility can be enumerated (using islice) a
 ```Python
 import matplotlib.pyplot as plt
 from itertools import islice
-max_shown = 2
+max_shown = 3
 shown_count = 1
 for communities in islice(comp, max_shown): # For each possible set of communities
 
