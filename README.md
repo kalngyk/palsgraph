@@ -78,11 +78,11 @@ for communities in islice(comp, max_shown):
     outfilename = 'graph-' + str(shown_count) + '.png'
     print("Possibility ", shown_count, " in " + outfilename)
 
-    pos = palsgraph.getpos(G, communities) # Find nodes layout using pals
+    pos = palsgraph.getpos(G, communities) # Find nodes layout using palsgraph
 
     colorize = True
     if colorize:
-        color_map = palsgraph.gen_colormap(G, communities);  # Generate a colormap using pals
+        color_map = palsgraph.gen_colormap(G, communities);  # Generate a colormap using palsgraph
     else:
         color_map = ['grey']
 
