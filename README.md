@@ -56,7 +56,7 @@ max_shown = 3
 shown_count = 1
 for communities in islice(comp, max_shown): # For each possible set of communities
 
-    # Find optimal positions for displaying the nodes in the graph
+    # Find optimal positions for displaying the communities in the graph
     pos = palsgraph.getpos(G, communities)
 
     # Generate a colormap
