@@ -72,7 +72,22 @@ for communities in islice(comp, max_shown): # For each possible set of communiti
     shown_count += 1
 ```
 
-If you implement your own community detection algorithm, just output the communities in the form of of a list of lists and you will be able to use PalsGraph just like in the example above.
+If you implement your own community detection algorithm, just output the communities in the form of of a list of lists, like:
+```Python
+# Call your own community detection algorithm
+communities = my_community_detection_algo(G)
+
+# Find optimal positions for displaying the communities in the graph
+pos = palsgraph.getpos(G, communities)
+
+# Generate a colormap
+color_map = palsgraph.gen_colormap(G, communities)
+
+# Draw graph and save to output file
+plt.figure(figsize=(17, 15))
+nx.draw(G, pos=pos, node_color=color_map, edge_color='grey', with_labels=True)
+plt.savefig('mygraph.png')
+```
 
 ### Sample output
 The following gives an example of the graphs generated using PalsGraph. Note that the graph connectedness is as given in the distance matrix, but the colors and positions are based only on the communities discovered. In this example, the communities discovered are mainly in accordance with the connectedness of graph structure, except for a few vertices.
