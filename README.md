@@ -90,7 +90,7 @@ plt.savefig('mygraph.png')
 ```
 
 ### Sample output
-The following gives an example of the graphs generated using PalsGraph. Note that the graph connectedness is as given in the distance matrix, but the colors and positions are based only on the communities discovered. In this example, the communities discovered are mainly in accordance with the connectedness of graph structure, except for a few vertices.
+The following gives an example of the graphs generated using PalsGraph. Note that the graph connectedness is as given in the distance matrix, but the colors and positions are based only on the communities discovered. In this example, the communities discovered are mainly in accordance with the connectedness of graph structure, except for a few vertices (near the bottom of the graph).
 
 ![Sample Output Graph](./tests/graph-1.png)
 
