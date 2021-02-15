@@ -47,7 +47,7 @@ Then, suppose we use a method in NetworkX to discover the communities in `G`. (I
 import networkx as nx
 comp = nx.algorithms.community.centrality.girvan_newman(G)
 ```
-NetworkX will return several possible ways to organize the graph into communities. Each possibility is an array of arrays. For example, `({'A'}, {'B', 'C'}, {'D', 'E'})`. In which case, `'A'` forms a community, `'B'`, `'C'` form another, and `'D'`, `'E'` likewise form another community.
+NetworkX will return several possible ways to organize the graph into communities. Each possibility is an list of lists. For example, `({'A'}, {'B', 'C'}, {'D', 'E'})`. In which case, `'A'` forms a community, `'B'`, `'C'` form another, and `'D'`, `'E'` likewise form another community.
 
 The following codes show how each possibility can be enumerated (using islice) and visualized using palsgraph. The `communities` input given to `palsgraph.getpos` and `palsgraph.gen_colormap` should be a list of lists, such as `({'A'}, {'B', 'C'}, {'D', 'E'})` or `[['A'], ['B', 'C'], ['D', 'E']]`.
 ```Python
