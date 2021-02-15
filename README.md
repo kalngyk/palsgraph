@@ -42,7 +42,7 @@ The following constructs a NetworkX graph from the distance matrix. A label-less
 import palsgraph
 G = palsgraph.make_graph(distmat, labels=labels, show_singletons=False)
 ```
-Then, suppose we use a method in NetworkX to discover the communities in `G`. (In the following, Garvin-Newman is used.)
+Then, suppose we use a method in NetworkX to discover the communities in `G`. (In the following, Girvan-Newman is used.)
 ```Python
 import networkx as nx
 comp = nx.algorithms.community.centrality.girvan_newman(G)
