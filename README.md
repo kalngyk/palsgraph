@@ -83,4 +83,4 @@ The following gives an example of the graph generated using PalsGraph. Note that
 If you have any questions or require assistance using PalsGraph, please contact us with kalngyk@gmail.com.
 
 ## Credits
-PalsGraph is written by Yujin Yao and Yen Kaow Ng.
+PalsGraph is written by Yujin Yao and Yen Kaow Ng under the supervision of Honwai Leong.
