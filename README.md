@@ -72,7 +72,7 @@ for communities in islice(comp, max_shown): # For each possible set of communiti
     shown_count += 1
 ```
 
-If you implement your own community detection algorithm, just output the communities in the form of `({'A'}, {'B', 'C'}, {'D', 'E'})` and you will be able to use PalsGraph just like in the example above.
+If you implement your own community detection algorithm, just output the communities in the form of of a list of lists and you will be able to use PalsGraph just like in the example above.
 
 ### Sample output
 The following gives an example of the graphs generated using PalsGraph. Note that the graph connectedness is as given in the distance matrix, but the colors and positions are based only on the communities discovered. In this example, the communities discovered are mainly in accordance with the connectedness of graph structure, except for a few vertices.
