@@ -5,6 +5,7 @@ PalsGraph provides three methods to enable easy use of NetworkX to display the c
 * getpos: Calculate the optimal positions for visualizing the graph nodes based on the communities
 * gen_colormap: Generate a colormap where each community is given a unique color
 
+![logo](./logo.png)
 
 ## Pre-requirements
 * python3
