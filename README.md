@@ -35,8 +35,9 @@ python setup.py install
 ### Quick start
 The following codes demonstrates how to use the three functions provided by PalsGraph.
 
-Assume that we have a distance matrix in `distmat`, with the labels of the entities in `labels`. 
-The following constructs a NetworkX graph from the distance matrix. A label-less graph is generated if `labels=None`. Disconnected vertices (vertices that are not connected to any other vertex) will not be shown if `show_singletons=False`.
+Assume that we have a distance matrix of some entities in `distmat`, with the labels of the entities in `labels`. (`labels` is sorted according to the entities' indices in `distmat`.)
+
+The following constructs a NetworkX graph from `distmat`. A label-less graph is generated if `labels=None`. Disconnected vertices (vertices that are not connected to any other vertex) will not be shown if `show_singletons=False`.
 
 ```Python
 import palsgraph
@@ -47,7 +48,7 @@ Then, suppose we use a method in NetworkX to discover the communities in `G`. (I
 import networkx as nx
 comp = nx.algorithms.community.centrality.girvan_newman(G)
 ```
-NetworkX will return several possible ways to organize the graph into communities. Each possibility is an list of lists. For example, `({'A'}, {'B', 'C'}, {'D', 'E'})`. In which case, the node `'A'` forms a community, `'B'`, `'C'` form another, and `'D'`, `'E'` likewise form another community.
+NetworkX will return several possible ways to organize the graph into communities. Each possibility is a list of lists. For example, `({'A'}, {'B', 'C'}, {'D', 'E'})`. In which case, the node `'A'` forms a community, `'B'`, `'C'` form another, and `'D'`, `'E'` likewise form another community.
 
 The following codes show how each possibility can be enumerated (using islice) and visualized using PalsGraph. The `communities` input given to `palsgraph.getpos` and `palsgraph.gen_colormap` should be a list of lists, such as `({'A'}, {'B', 'C'}, {'D', 'E'})` or `[['A'], ['B', 'C'], ['D', 'E']]`.
 ```Python
