@@ -13,7 +13,7 @@ PalsGraph provides three methods to enable easy use of [NetworkX](https://networ
 * numpy>=1.16.1
 * networkx
 * seaborn
-* pybind11~=2.6.1 (if there is no binary/wheel file for your platform, in which case you will also need a C++ compiler)
+* pybind11~=2.6.1 (if there is no binary/wheel file for your platform and you need to compile from source)
 
 ## Installation
 
