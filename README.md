@@ -7,6 +7,8 @@ PalsGraph provides three methods to enable easy use of NetworkX to display the c
 
 ![logo](./logo.png)
 
+PalsGraph is made to blend in naturally with NetworkX.
+
 ## Pre-requirements
 * python3
 * numpy>=1.16.1
