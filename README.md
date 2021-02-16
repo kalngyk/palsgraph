@@ -37,7 +37,7 @@ The following codes demonstrates how to use the three functions provided by Pals
 
 Assume that we have a distance matrix of some entities in `distmat`, with the labels of the entities in `labels`. (`labels` is sorted according to the entities' indices in `distmat`.)
 
-The following constructs a NetworkX graph from `distmat`. A label-less graph is generated if `labels=None`. Disconnected vertices (vertices that are not connected to any other vertex) will not be shown if `show_singletons=False`.
+The following constructs a NetworkX graph from `distmat` and `labels`. A label-less graph is created if `labels=None`. Disconnected vertices (vertices that are not connected to any other vertex) will not be shown if `show_singletons=False`.
 
 ```Python
 import palsgraph
