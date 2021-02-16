@@ -73,7 +73,7 @@ for communities in islice(comp, max_shown): # For each possible set of communiti
     shown_count += 1
 ```
 
-If you implement your own community detection algorithm, just output the communities in the form of of a list of lists. Then, you can use PalsGraph as follows.
+If you implement your own community detection algorithm, just output the communities in the form of a list of lists. Then, you can use PalsGraph as follows.
 ```Python
 # Call your own community detection algorithm
 communities = my_community_detection_algo(G)
