@@ -1,5 +1,5 @@
 # PalsGraph: a module for use with NetworkX to display communities in graph
-PalsGraph provides three methods to enable easy use of [NetworkX!](https://networkx.org/) to display the communities discovered in a graph.
+PalsGraph provides three methods to enable easy use of [NetworkX](https://networkx.org/) to display the communities discovered in a graph.
 
 * make\_graph: Create a NetworkX graph with labels
 * getpos: Calculate the optimal positions for visualizing the graph nodes based on the communities
