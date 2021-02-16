@@ -12,7 +12,7 @@ PalsGraph provides three methods to enable easy use of NetworkX to display the c
 * numpy>=1.16.1
 * networkx
 * seaborn
-* pybind11~=2.6.1 (if there is no wheel file for your platform, in which case you will also need a C++ compiler)
+* pybind11~=2.6.1 (if there is no binary/wheel file for your platform, in which case you will also need a C++ compiler)
 
 ## Installation
 
