@@ -14,7 +14,7 @@ PalsGraph is made to integrate seamlessly with NetworkX so that you can use all 
 * numpy>=1.16.1
 * networkx
 * seaborn
-* pybind11~=2.6.1 (if there is no wheel/binary for your platform and you need to compile from source)
+* pybind11~=2.6.1 (if you need to compile from source)
 
 ## Installation
 
