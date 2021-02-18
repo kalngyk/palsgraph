@@ -1,5 +1,5 @@
 /**
- * Yujin Yao (pybind11 interface added by Yen Kaow Ng)
+ * Yujian Yao (pybind11 interface added by Yen Kaow Ng)
  */
 #include <iostream>
 #include <sstream>
