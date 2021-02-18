@@ -101,4 +101,4 @@ The following gives an example of the graphs generated using PalsGraph. Note tha
 If you have any questions or require assistance using PalsGraph, please contact us at kalngyk@gmail.com.
 
 ## Credits
-PalsGraph is written by Yujin Yao and Yen Kaow Ng under the supervision of Honwai Leong.
+PalsGraph is written by Yujian Yao and Yen Kaow Ng under the supervision of Honwai Leong.
