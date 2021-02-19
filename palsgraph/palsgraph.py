@@ -41,20 +41,21 @@ def getpos(G, communities):
     return results
 
 
-def gen_colormap(G, communities):
+def _gen_colormap(G, communities):
     color_map = []
-    cls_elem_count = np.array([len(c) for c in communities])
     n2c = dict()
-    for i, c in enumerate(communities):
-        for n in c:
-            n2c[str(n)] = i
-    palette = color_palette(None, len(cls_elem_count[cls_elem_count > 1])+1)
-    for node in G.nodes:
-        c = n2c[node]
-        if cls_elem_count[c] == 1:
-            idx = len(palette) - 1
+    color_count = 0
+    for c in communities:
+        if len(c) > 1:
+            for n in c:
+                n2c[str(n)] = color_count
+            color_count += 1
         else:
-            idx = c % (len(palette) - 1)
+            for n in c:
+                n2c[str(n)] = -1
+    palette = color_palette(None, color_count + 1)
+    for i, node in enumerate(G.nodes):
+        idx = n2c[node] if n2c[node] >= 0 else color_count 
         color_map.append(palette[idx])
     return color_map
 
