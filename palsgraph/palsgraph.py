@@ -41,7 +41,7 @@ def getpos(G, communities):
     return results
 
 
-def _gen_colormap(G, communities):
+def gen_colormap(G, communities):
     color_map = []
     n2c = dict()
     color_count = 0
