@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('pdf')
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial.distance import squareform
@@ -35,7 +37,7 @@ dismat2 = dismat2.reshape((-1,))
 dismat2[dismat2 > threshold] = 0
 dismat2 = dismat2.reshape(dismat.shape)
 
-G = palsgraph.make_graph(dismat2, labels=labels, show_singletons=False)
+G = palsgraph.make_graph(dismat2, labels=labels)
 
 #####################################################################################
 # Find community
