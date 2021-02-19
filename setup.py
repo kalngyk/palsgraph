@@ -4,7 +4,7 @@ from glob import glob
 
 setuptools.setup(
     name='palsgraph',
-    version='0.0.3',
+    version='0.0.4',
     url="https://github.com/kalngyk/palsgraph",
     packages=setuptools.find_packages(),
     py_modules=['palsgraph'],
