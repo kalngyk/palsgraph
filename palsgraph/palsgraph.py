@@ -59,4 +59,3 @@ def _gen_colormap(G, communities):
         color_map.append(palette[idx])
     return color_map
 
-
