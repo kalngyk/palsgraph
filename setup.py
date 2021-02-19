@@ -2,15 +2,17 @@ import setuptools
 from pybind11.setup_helpers import Pybind11Extension
 from glob import glob
 
-ext_modules = [
-    Pybind11Extension("palsgetpos", glob("src/*.cpp")),
-]
-
 setuptools.setup(
     name='palsgraph',
-    version='0.0.1',
-    py_modules=['palsgraph'],
+    version='0.0.3',
+    url="https://github.com/kalngyk/palsgraph",
     packages=setuptools.find_packages(),
-    ext_modules=ext_modules,
+    py_modules=['palsgraph'],
+    ext_modules=[Pybind11Extension("palsgetpos", glob("src/*.cpp"))],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ]
 )
 
