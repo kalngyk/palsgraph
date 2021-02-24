@@ -7,7 +7,6 @@ PalsGraph provides three methods to enable easy use of [NetworkX](https://networ
 
 ![Teaser image](./logo.png)
 
-PalsGraph is made to integrate seamlessly with NetworkX so that you can use all the features in NetworkX for your network analysis needs.
 
 ## Pre-requirements
 * python3
