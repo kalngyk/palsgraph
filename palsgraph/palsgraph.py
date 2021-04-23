@@ -54,8 +54,8 @@ def gen_colormap(G, communities):
             for n in c:
                 n2c[str(n)] = -1
     palette = color_palette(None, color_count + 1)
-    for i, node in enumerate(G.nodes):
-        idx = n2c[node] if n2c[node] >= 0 else color_count 
+    for node in G.nodes:
+        idx = n2c[str(node)] if n2c[str(node)] >= 0 else color_count 
         color_map.append(palette[idx])
     return color_map
 
