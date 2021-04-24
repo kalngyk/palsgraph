@@ -36,7 +36,7 @@ python setup.py install
 ### Quick start
 The following codes demonstrates how to use the three functions provided by PalsGraph.
 
-Let `adjacencies` be the adjacency matrix of a list of entities with labels in a list called `labels`, sorted according to the entities' indices in `adjacencies`.
+Let `adjacencies` be the adjacency matrix of a list of entities with labels in a list called `labels`, ordered according to the entities' indices in `adjacencies`.
 
 The following constructs a NetworkX graph from `adjacencies` and `labels`. A label-less graph is created if `labels=None`, in which case vertices are identified by their indices. Disconnected vertices (vertices that are not connected to any other vertex) will not be shown if `show_singletons=False`.
 
