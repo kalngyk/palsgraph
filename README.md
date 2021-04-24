@@ -36,7 +36,7 @@ python setup.py install
 ### Quick start
 The following codes demonstrates how to use the three functions provided by PalsGraph.
 
-Assume that we have a weight matrix of some entities in `weight_matrix`, with the labels of the entities in `labels`, where `labels` is sorted according to the entities' indices in `weight_matrix`.
+Assume that we have the pairwise similarities of a list of entities in a matrix called `weight_matrix`, with the labels of the entities in a list called `labels`, where `labels` is sorted according to the entities' indices in `weight_matrix`.
 
 The following constructs a NetworkX graph from `weight_matrix` and `labels`. A label-less graph is created if `labels=None`. Disconnected vertices (vertices that are not connected to any other vertex) will not be shown if `show_singletons=False`.
 
