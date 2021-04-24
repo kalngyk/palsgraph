@@ -30,14 +30,28 @@ dismat = squareform([x[2] for x in X])
 #####################################################################################
 # Constructs graph from distance matrix
 
-threshold = 0.75
-dismat2 = dismat.copy()
-np.fill_diagonal(dismat2, np.min(dismat))
-dismat2 = dismat2.reshape((-1,))
-dismat2[dismat2 > threshold] = 0
-dismat2 = dismat2.reshape(dismat.shape)
+threshold = 0.77 # Replace this with your choice of threshold
 
-G = palsgraph.make_graph(dismat2, labels=labels)
+# Initialize similarity matrix
+simmat = dismat.copy().reshape((-1,))
+
+# Preparation: remember the indices of the disconnected entries
+unconnected_indices = (simmat > threshold)
+
+# Convert distance to similarity
+simmat = np.exp(-np.square(simmat))
+
+# Set disconnected entries to zero
+simmat[unconnected_indices] = 0
+print("{} out of {} values set to zero".format(len(simmat[simmat == 0]), len(simmat)))
+
+# Restore shape
+simmat = simmat.reshape(dismat.shape)
+
+# Fill diagonal with the maximum affinity
+np.fill_diagonal(simmat, np.max(simmat))
+
+G = palsgraph.make_graph(simmat, labels=labels)
 
 #####################################################################################
 # Find community
