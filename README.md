@@ -51,6 +51,7 @@ comp = nx.algorithms.community.centrality.girvan_newman(G)
 ```
 NetworkX will return several possible ways to organize the graph into communities. Each possibility is a list of lists. For example, `({'A'}, {'B', 'C'}, {'D', 'E'})`. In which case, the node `'A'` forms a community, `'B'`, `'C'` form another, and `'D'`, `'E'` likewise form another community.
 
+PalsGraph produces a 2D visualization of a community discovered using a iterative force-based algorithm.
 The following codes show how each possibility can be enumerated (using islice) and visualized using PalsGraph. The `communities` input given to `palsgraph.getpos` and `palsgraph.gen_colormap` should be a list of lists, such as `({'A'}, {'B', 'C'}, {'D', 'E'})` or `[['A'], ['B', 'C'], ['D', 'E']]`.
 ```Python
 import matplotlib.pyplot as plt
